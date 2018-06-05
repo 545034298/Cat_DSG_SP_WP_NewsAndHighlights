@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "cat-dsg-sp-wp-1003-news-and-highlights-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/catDsgSpWp1003NewsAndHighlights/CatDsgSpWp1003NewsAndHighlightsWebPart.js",
+          "manifest": "./src/webparts/catDsgSpWp1003NewsAndHighlights/CatDsgSpWp1003NewsAndHighlightsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CatDsgSpWp1003NewsAndHighlightsWebPartStrings": "lib/webparts/catDsgSpWp1003NewsAndHighlights/loc/{locale}.js"
+  }
+}
