@@ -18,11 +18,18 @@
     "group": {
       "default": "Catapult Systems"
     },
-    "title": { "default": "News And Highlights" },
-    "description": { "default": "Displays items from the News and Highlights list." },
-    "officeFabricIconFontName": "Page",
+    "title": { 
+      "default": "News And Highlights",
+      "zh-cn":"新闻亮点"
+    },
+    "description": { 
+      "default": "Displays items from the News and Highlights list.",
+      "zh-cn":"显示新闻亮点列表"
+    },
+    "officeFabricIconFontName": "News",
     "properties": {
-      "description": "Displays items from the &#34;News and Highlights&#34; list."
+      "description": "Displays items from the News and Highlights list.",
+      "listName":"News and Highlights"
     }
   }]
 }
