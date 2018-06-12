@@ -70,4 +70,186 @@
       display: inline-block;
     }
   }
+  :not(.CanvasZone--fullWidth).CanvasZone .ControlZone {
+    padding:0px !important;
+  }
+  
+  @media only screen and (min-width: 20em) {
+    .catDsgSpWp1003NewsAndHighlightsSlideShowNoResults {
+      display:none;
+    }
+    .catDsgSpWp1003NewsAndHighlightsLargePictureContainer, .catDsgSpWp1003NewsAndHighlightsLargePictureContainer, .catDsgSpWp1003NewsAndHighlightsPictureOnTopImageContainer, .catDsgSpWp1003NewsAndHighlightsPicture3LinesImageContainer, .catDsgSpWp1003NewsAndHighlightsLargePictureImageContainer {
+      position: relative;
+  }
+  
+  .catDsgSpWp1003NewsAndHighlightsLargePictureContainer, .catDsgSpWp1003NewsAndHighlightsLargePictureImageContainer {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  .catDsgSpWp1003NewsAndHighlightsPictureImgLink {
+    text-decoration: none;
+  }
+  
+    .catDsgSpWp1003NewsAndHighlightsSlideshow {
+      background: none;
+      height: auto;
+      width: 100%;
+      max-height: none;
+      max-width: 100%;
+      overflow: visible;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideShowItems > div {
+      margin: 0;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow h2 {
+      font-family: 'Raleway', sans-serif;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar, .catDsgSpWp1003NewsAndHighlightsSlideshowPagingBarOverlay {
+      position: absolute;
+      bottom: 0px;
+      height: 30px;
+  }
+  
+    .catDsgSpWp1003NewsAndHighlightsSlideshowPagingBarOverlay {
+      z-index: 3;
+      width: 100%;
+  }
+  
+  .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar, .catDsgSpWp1003NewsAndHighlightsSlideshowPagingBarOverlay {
+    bottom: 5px;
+  }
+  .catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar {
+      right: 27px;
+      z-index: 4;
+      color: white;
+      overflow: hidden;
+      top:4px;
+  }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .CatDsgSpWp1003NewsAndHighlightsSlideshowPagingBarOverlay {
+      display: none;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar {
+      position: relative;
+      right: 0;
+      clear: both;
+      float: right;
+    }
+    a.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkActive, a.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkInactive {
+      width: 12px;
+      text-decoration: none;
+      float: left;
+      margin-left: 10px;
+      height: 12px;
+  }
+  
+   a.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkActive {
+    background-color: #f15a29;
+   }
+   a.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkInactive {
+    background-color: #d2d2d2;
+   }
+  
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureContainer {
+      width: 100%;
+      max-width: 100%;
+      min-width: 320px;
+      padding: 0;
+      height: auto;
+      max-height: none;
+      overflow: visible;
+      display: none;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureImageContainer {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .catDsgSpWp1003NewsAndHighlightsSlideshow img {
+      margin: 0;
+      vertical-align: middle;
+      border: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureImg {
+      max-width: 100%;
+      max-height: none;
+      width: 100%;
+      height: auto;
+      display:block;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureDataContainer {
+      width: 100%;
+      padding: 8px 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      bottom: 0;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureDataOverlay {
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 80px;
+      position: absolute;
+      background-color: #000;
+      filter: alpha(opacity=60);
+      -moz-opacity: 0.6;
+      -khtml-opacity: 0.6;
+      -webkit-opacity: 0.6;
+      -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+      opacity: 0.6;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureLine1Link {
+      color: #fff !important;
+      text-decoration: none;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureLine1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      font-style: normal;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureLine2 {
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      color: #ccc;
+      top: 0;
+      height: 36px;
+      overflow: hidden;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureLine2 {
+      overflow: visible;
+      white-space: normal;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureContainer .catDsgSpWp1003NewsAndHighlightsNoImageContainer {
+      min-height: 342px;
+    }
+  }
+  @media only screen and (max-width: 48em) {
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureLine1 {
+      font-size: 12.8px;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureLine2 {
+      font-size: 12.8px;
+      display: none;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureDataContainer {
+      width: 100%;
+      height: 20%;
+    }
+    .catDsgSpWp1003NewsAndHighlightsSlideshow .catDsgSpWp1003NewsAndHighlightsLargePictureDataOverlay {
+      width: 100%;
+      height: 20%;
+    }
+  }  
 }
