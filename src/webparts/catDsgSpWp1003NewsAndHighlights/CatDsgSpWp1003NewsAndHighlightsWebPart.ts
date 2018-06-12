@@ -10,9 +10,9 @@ import { escape } from '@microsoft/sp-lodash-subset';
 import styles from './CatDsgSpWp1003NewsAndHighlightsWebPart.module.scss';
 import * as strings from 'CatDsgSpWp1003NewsAndHighlightsWebPartStrings';
 import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
-import * as $ from 'jquery';
 require('./CatDsgSpWp1003NewsAndHighlightsWebPartExtension.js');
 import SlideShow from './CatDsgSpWp1003NewsAndHighlightsWebpartSlideShow';
+import JQueryLoader from './JQueryLoader';
 
 export interface ICatDsgSpWp1003NewsAndHighlightsWebPartProps {
   description: string;
@@ -40,8 +40,9 @@ export default class CatDsgSpWp1003NewsAndHighlightsWebPart extends BaseClientSi
   public render(): void {
     this.context.statusRenderer.clearError(this.domElement);
     this.properties.description = strings.CatDsgSpWp1003NewsAndHignlightsDescription;
-    require('./CatDsgSpWp1003NewsAndHighlightsWebPart.scss');
-    this.domElement.innerHTML = `
+    JQueryLoader.LoadDependencies("https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js", []).then((object) => {
+      require('./CatDsgSpWp1003NewsAndHighlightsWebPart.scss');
+      this.domElement.innerHTML = `
       <div class="${ styles.catDsgSpWp1003NewsAndHighlights}">
         <div class="${ styles.container}">
           <div class="${styles.catDsgSpWp1003NewsAndHighlightsSlideshow}" id="${this.context.instanceId}_slideShow_">
@@ -54,7 +55,8 @@ export default class CatDsgSpWp1003NewsAndHighlightsWebPart extends BaseClientSi
           </div>
         </div>
       </div>`;
-    this.renderNewsAndHighLights();
+      this.renderNewsAndHighLights();
+    });
   }
   private renderNewsAndHighLights() {
     this.getSlideNewsAndHighLights(this.properties.listName).then((slideNewsAndHighLights: SlideNewsAndHignLightsItems) => {
@@ -91,23 +93,23 @@ export default class CatDsgSpWp1003NewsAndHighlightsWebPart extends BaseClientSi
           dynamicNewsAndHighlightsPagingBarHrml += slideNewsAndHignlightsPagingBarItemHtml;
         }
         this.domElement.querySelector("." + styles.catDsgSpWp1003NewsAndHighlightsSlideShowItems).innerHTML = dynamicNewsAndHighlightsHtml;
-        this.domElement.querySelector("."+styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar).innerHTML = dynamicNewsAndHighlightsPagingBarHrml;
-        $(this.domElement).find('.'+styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar+'>a').each((index, ele) => {
+        this.domElement.querySelector("." + styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar).innerHTML = dynamicNewsAndHighlightsPagingBarHrml;
+        $(this.domElement).find('.' + styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingBar + '>a').each((index, ele) => {
           ele.addEventListener('click', function () {
             var slideIndex = ele.getAttribute("data-index");
             SlideShow.handleSlideButtonOnClickEvent(this, slideIndex);
           });
         });
 
-        var slideshows = $(this.domElement).find("."+styles.catDsgSpWp1003NewsAndHighlightsSlideshow);
+        var slideshows = $(this.domElement).find("." + styles.catDsgSpWp1003NewsAndHighlightsSlideshow);
         SlideShow.slideCount = slideNewsAndHighLights.value.length;
-        SlideShow.activeSlideButtonClassName=styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkActive;
-        SlideShow.inactiveSlideButtonClassName=styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkInactive;
+        SlideShow.activeSlideButtonClassName = styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkActive;
+        SlideShow.inactiveSlideButtonClassName = styles.catDsgSpWp1003NewsAndHighlightsSlideshowPagingLinkInactive;
         for (var j = 0; j < slideshows.length; j++) {
           SlideShow.initializeSlideShow(slideshows[j]);
         }
       } else {
-        $(this.domElement).find("."+styles.catDsgSpWp1003NewsAndHighlightsSlideShowNoResults).show();
+        $(this.domElement).find("." + styles.catDsgSpWp1003NewsAndHighlightsSlideShowNoResults).show();
       }
     }, (error: any) => {
       this.context.statusRenderer.renderError(this.domElement, error);

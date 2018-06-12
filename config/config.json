@@ -12,7 +12,6 @@
     }
   },
   "externals": {
-    "jquery": "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"
   },
   "localizedResources": {
     "CatDsgSpWp1003NewsAndHighlightsWebPartStrings": "lib/webparts/catDsgSpWp1003NewsAndHighlights/loc/{locale}.js"

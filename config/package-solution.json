@@ -4,7 +4,7 @@
     "name": "cat-dsg-sp-wp-1003-news-and-highlights-client-side-solution",
     "id": "186a1404-95f4-4486-8c57-767bbce0965e",
     "version": "1.0.0.1",
-    "includeClientSideAssets": false,
+    "includeClientSideAssets": true,
     "skipFeatureDeployment": true
   },
   "paths": {
