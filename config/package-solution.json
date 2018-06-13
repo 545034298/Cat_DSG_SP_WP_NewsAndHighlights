@@ -3,9 +3,23 @@
   "solution": {
     "name": "cat-dsg-sp-wp-1003-news-and-highlights-client-side-solution",
     "id": "186a1404-95f4-4486-8c57-767bbce0965e",
-    "version": "1.0.0.1",
+    "version": "1.0.0.2",
     "includeClientSideAssets": true,
-    "skipFeatureDeployment": true
+    "skipFeatureDeployment": true,
+    "features": [{
+     "title": "cat-dsg-sp-wp-1003-news-and-highlights-client-side-solution",
+     "description": "cat-dsg-sp-wp-1003-news-and-highlights-client-side-solution",
+     "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",
+     "version": "1.0.0.2",
+     "assets": {
+       "elementManifests": [
+         "elements.xml"
+       ],
+       "elementFiles":[
+         "schema.xml"
+       ]
+     }
+   }]
   },
   "paths": {
     "zippedPackage": "solution/cat-dsg-sp-wp-1003-news-and-highlights.sppkg"

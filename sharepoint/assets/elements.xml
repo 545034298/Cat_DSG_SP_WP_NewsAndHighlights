@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        ID="{1b8a8978-ae34-4604-950d-63230d4227e2}" 
+        Name="SlideCaption"
+        DisplayName="SlideCaption"
+        StaticName="SlideCaption" 
+        Type="Note" 
+        Required="FALSE" 
+        Group="Fuse Columns"
+        NumLines="6" 
+        RichText="FALSE" 
+        Sortable="FALSE">
+    </Field>
+    <Field 
+        ID="{fb1ade5a-b6cf-429b-b1f7-72f3b9d3dcfa}" 
+        Name="SlideContentOwner" 
+        DisplayName="SlideContentOwner"
+        StaticName="SlideContentOwner" 
+        Type="Text"  
+        Required="FALSE"
+        Group="Fuse Columns" 
+        Indexed="FALSE" 
+        MaxLength="255">
+    </Field>
+    <Field 
+        ID="{f5dd4193-0436-4264-b2f4-00d5170d1c60}"
+        Name="SlideImageUrl"
+        DisplayName="SlideImageUrl" 
+        StaticName="SlideImageUrl" 
+        Type="URL" 
+        Required="TRUE" 
+        Group="Fuse Columns"
+        Format="Hyperlink">
+    </Field>
+    <Field
+        ID="{e5180b98-efda-43c1-958e-0bf1de978674}"
+        Name="SlideStatus" 
+        DisplayName="SlideStatus" 
+        StaticName="SlideStatus"
+        Type="Boolean" 
+        Group="Fuse Columns">
+          <Default>1</Default>
+    </Field>
+    <Field 
+        ID="{989b829a-0b9d-4942-974b-7601c0b21874}"
+        Name="SlideUrl"
+        DisplayName="SlideUrl"
+        StaticName="SlideUrl" 
+        Type="Text"
+        Group="Fuse Columns"
+        Required="FALSE" 
+        MaxLength="255">
+    </Field>
+    <Field
+        ID="{90201fbd-135b-49f4-9ba3-7b1c9cdd1dd2}" 
+        Name="fuseCheckBox03"
+        DisplayName="fuseCheckBox03"
+        StaticName="fuseCheckBox03" 
+        Type="Boolean"
+        Group="Fuse Columns"
+        Required="FALSE">
+          <Default>0</Default>
+    </Field>
+    <Field
+        ID="{6dfbe71e-3e4b-4c39-bf1a-50ea622f2b1c}" 
+        Name="fuseCheckBox04"
+        DisplayName="fuseCheckBox04"
+        StaticName="fuseCheckBox04" 
+        Type="Boolean"
+        Required="FALSE"  
+        Group="Fuse Columns">
+          <Default>0</Default>
+    </Field>
+
+
+   <ContentType ID="0x0100D1C7DCD195610B42BFEBC95E0940DEA5" 
+            Name="Slider" 
+            Description="Create a new list item." 
+            Group="Fuse Content Types">
+        <FieldRefs>
+            <FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+            <FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="TRUE" />
+            <FieldRef ID="1b8a8978-ae34-4604-950d-63230d4227e2" Name="SlideCaption" />
+            <FieldRef ID="f5dd4193-0436-4264-b2f4-00d5170d1c60" Name="SlideImageUrl" Required="TRUE" />
+            <FieldRef ID="989b829a-0b9d-4942-974b-7601c0b21874" Name="SlideUrl" />
+            <FieldRef ID="fb1ade5a-b6cf-429b-b1f7-72f3b9d3dcfa" Name="SlideContentOwner" />
+            <FieldRef ID="e5180b98-efda-43c1-958e-0bf1de978674" Name="SlideStatus" />
+            <FieldRef ID="90201fbd-135b-49f4-9ba3-7b1c9cdd1dd2" Name="fuseCheckBox03" DisplayName="Mobile Display" />
+            <FieldRef ID="6dfbe71e-3e4b-4c39-bf1a-50ea622f2b1c" Name="fuseCheckBox04" DisplayName="Mobile Alert Notification"/>
+        </FieldRefs>
+    </ContentType>
+
+   <ListInstance 
+        CustomSchema="schema.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="News and Highlights"
+        Description="" 
+        TemplateType="100" 
+        Url="Lists/News and Highlights">
+    </ListInstance>
+</Elements>

@@ -66,7 +66,10 @@ export default class CatDsgSpWp1003NewsAndHighlightsWebPart extends BaseClientSi
         let dynamicNewsAndHighlightsPagingBarHrml = ``;
         for (var i = 0; i < slideNewsAndHighLights.value.length; i++) {
           let slideNewsAndHighLightItem = slideNewsAndHighLights.value[i];
-          let slidecaptionTrimmer = this.wordTrimmer(slideNewsAndHighLightItem.SlideCaption, 180);
+          let slidecaptionTrimmer:string='';
+          if(slideNewsAndHighLightItem.SlideCaption) {
+            slidecaptionTrimmer = this.wordTrimmer(slideNewsAndHighLightItem.SlideCaption, 180);
+          }
           let slideNewsAndHighlightItemHtml = `
               <div class="${styles.catDsgSpWp1003NewsAndHighlightsLargePictureContainer}" id="${this.context.instanceId}_largePicture_container">
                 <div class="${styles.catDsgSpWp1003NewsAndHighlightsLargePictureImageContainer}" id="${this.context.instanceId}_largePicture_pictureContainer">
